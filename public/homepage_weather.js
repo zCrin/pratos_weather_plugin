@@ -62,14 +62,14 @@ var tempP = '8';
 }
 
 
-var windIcon= "<i class='wi wi-strong-wind'></i> &nbsp; &nbsp;";
+var windIcon= "<i class='wi weatherIcon wi-strong-wind'></i> &nbsp; ";
 if(infos.wind.deg){
-windIcon = "<i style='font-size:120%' class='wi wi-wind from-"+ infos.wind.deg +"-deg'></i>&nbsp; ";
+windIcon = "<i style='font-size:120%' class='wi weatherIcon wi-wind from-"+ infos.wind.deg +"-deg'></i>&nbsp; ";
 }
 var gColor = $("h1").css("color");
 var bColor = $("body").css("background-color");
 $("head").append('<link rel="stylesheet" type="text/css" href="/weather-icons.min.css"/> <link rel="stylesheet" type="text/css" href="/weather-icons-wind.min.css"/>');
-show_data("<style>i{color:"+ bColor +";}</style><div style='display:flex; padding:"+tempP+"% 4%;justify-content: space-around;flex-wrap: wrap;align-items: center;'><i style='font-size:300%;color:"+gColor+";'class='wi wi-owm-"+tIcon+infos.weather[0].id+"'></i><div><h4 style='font-size:200%;margin:0;'>"+infos.name+"</h4><h5 style='font-size:120%;font-weight:200;margin:0;'>"+infos. weather[0].description. capitalize() +". </h5></div></div><div style='text-align:center; font-size:300%; color:"+gColor+";'>"+ infos.main.temp +"</div><div style='display:flex; font-size:120%;padding: "+tempP/2+"% 4%;justify-content: space-around;flex-wrap: wrap;align-items: center;'><div><i class='wi wi-barometer'></i> &nbsp; "+ infos.main.pressure +" hPa </div> <div><i class='wi wi-humidity'></i>&nbsp; "+ infos.main.humidity +" % </div> <div> "+ windIcon+ infos.wind.speed +"</div></div> <div style='display:flex; font-size:120%;padding: "+tempP/2+"% 4%;justify-content: space-around;flex-wrap: wrap;align-items: center;'><div><i class='wi wi-sunrise'></i> &nbsp; "+ sunrise_set( infos.sys.sunrise)+"</div><div><i class='wi wi-sunset'></i> &nbsp; "+ sunrise_set( infos.sys.sunset)+"</div></div>");
+show_data("<style>.weatherIcon{color:"+ bColor +";}</style><div style='display:flex; padding:"+tempP+"% 4%;justify-content: space-around;flex-wrap: wrap;align-items: center;'><i style='font-size:300%;color:"+gColor+";'class='wi wi-owm-"+tIcon+infos.weather[0].id+"'></i><div><h4 style='font-size:200%;margin:0;'>"+infos.name+"</h4><h5 style='font-size:120%;font-weight:200;margin:0;'>"+infos. weather[0].description. capitalize() +". </h5></div></div><div style='text-align:center; font-size:300%; color:"+gColor+";'>"+ infos.main.temp +"</div><div style='display:flex; font-size:120%;padding: "+tempP/2+"% 4%;justify-content: space-around;flex-wrap: wrap;align-items: center;'><div><i class='wi weatherIcon  wi-barometer'></i> &nbsp; "+ infos.main.pressure +" hPa </div> <div><i class='wi weatherIcon  wi-humidity'></i>&nbsp; "+ infos.main.humidity +" % </div> <div> "+ windIcon+ infos.wind.speed +"</div></div> <div style='display:flex; font-size:120%;padding: "+tempP/2+"% 4%;justify-content: space-around;flex-wrap: wrap;align-items: center;'><div><i class='wi weatherIcon  wi-sunrise'></i> &nbsp; "+ sunrise_set( infos.sys.sunrise)+"</div><div><i class='wi weatherIcon  wi-sunset'></i> &nbsp; "+ sunrise_set( infos.sys.sunset)+"</div></div>");
  }
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);

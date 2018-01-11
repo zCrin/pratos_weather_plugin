@@ -17,5 +17,13 @@
     "pratos_user_class": "*",
     "request": "*",
     "mongodb": "*"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zCrin/pratos_weather_plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zCrin/pratos_weather_plugin/issues"
+  },
+  "homepage": "https://github.com/zCrin/pratos_weather_plugin#readme"
 }
